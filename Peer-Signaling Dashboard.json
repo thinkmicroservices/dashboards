@@ -1,0 +1,279 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "$$hashKey": "object:7",
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 1,
+  "links": [],
+  "panels": [
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Prometheus",
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "hiddenSeries": false,
+      "id": 4,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "rate(peer_signaling_peer_accept_call_total[1m])",
+          "interval": "",
+          "legendFormat": "accept call ",
+          "refId": "A"
+        },
+        {
+          "expr": "rate(peer_signaling_peer_answer_total[1m])",
+          "interval": "",
+          "legendFormat": "answer",
+          "refId": "B"
+        },
+        {
+          "expr": "rate(peer_signaling_peer_call_request_canceled_total[1m])",
+          "interval": "",
+          "legendFormat": "call request canceled",
+          "refId": "C"
+        },
+        {
+          "expr": "rate(peer_signaling_peer_call_request_response_total[1m])",
+          "interval": "",
+          "legendFormat": "call request response",
+          "refId": "D"
+        },
+        {
+          "expr": "rate(peer_signaling_peer_call_request_total[1m])",
+          "interval": "",
+          "legendFormat": "call request",
+          "refId": "E"
+        },
+        {
+          "expr": "rate(peer_signaling_peer_candidate_total[1m])",
+          "interval": "",
+          "legendFormat": "candidate",
+          "refId": "F"
+        },
+        {
+          "expr": "rate(peer_signaling_peer_offer_total[1m])",
+          "interval": "",
+          "legendFormat": "offer",
+          "refId": "G"
+        },
+        {
+          "expr": "rate(peer_signaling_peer_remote_hangup_total[1m])",
+          "interval": "",
+          "legendFormat": "remote hangup",
+          "refId": "H"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Peer Events",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Prometheus",
+      "description": "",
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 8
+      },
+      "hiddenSeries": false,
+      "id": 2,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "rate(peer_signaling_connection_total[1m])",
+          "interval": "",
+          "legendFormat": "connections",
+          "refId": "A"
+        },
+        {
+          "expr": "rate(peer_signaling_disconnection_total[1m])",
+          "interval": "",
+          "legendFormat": "disconnection",
+          "refId": "B"
+        },
+        {
+          "expr": "rate(peer_signaling_peer_register_user_total[1m])",
+          "interval": "",
+          "legendFormat": "registration",
+          "refId": "C"
+        },
+        {
+          "expr": "rate(peer_signaling_deregistration_total[1m])",
+          "interval": "",
+          "legendFormat": "deregisteration",
+          "refId": "D"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "peer connection/registration",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    }
+  ],
+  "refresh": "5s",
+  "schemaVersion": 22,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-5m",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Peer-Signaling Dashboard",
+  "uid": "Frvr12MMz",
+  "variables": {
+    "list": []
+  },
+  "version": 1
+}
